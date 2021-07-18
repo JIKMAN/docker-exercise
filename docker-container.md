@@ -119,7 +119,7 @@ Docker command를 통해 __CPU, Memory, Disk I/O__ 등의 리소스를 제한할
 
 ### 실습
 
-> 메모리 리소스 제한
+> ### 메모리 리소스 제한
 
 메모리 부하 확인할 dockerfile 생성
 
@@ -162,7 +162,7 @@ stress: info: [1] successful run completed in 5s
 
 <br/>
 
-> CPU 리소스 제한
+> ### CPU 리소스 제한
 
 #### 1. CPU 코어 설정
 
@@ -196,7 +196,7 @@ stress: info: [1] successful run completed in 5s
 
 (CPU돌아가는 소리가 엄청나서 컴퓨터 터지는줄...)
 
-#### 3. Block I/O 제한
+> #### Block I/O 제한
 
 * `$ docker run -it --rm --device-write-iops /dev/xvda:10 ubuntu:latest /bin/bash`
 
@@ -228,7 +228,7 @@ stress: info: [1] successful run completed in 5s
 
   block IO 설정을 통해 확연한 속도 차이를 확인할 수 있음
 
-#### 4. cAdvisor
+> ### cAdvisor
 
 * https://github.com/google/cadvisor/
 
