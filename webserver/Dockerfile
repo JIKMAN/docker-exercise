@@ -5,7 +5,7 @@ LABEL maintainer="Jungik Kim <wjddlr0303@gmail.com>"
 RUN apt-get update \
     && apt-get install -y apache2
 
-# 웹 페이지 저장
+# HTML 문서 생성
 RUN echo "TEST WEB" > /var/www/html/index.html
 
 # 포트 지정
