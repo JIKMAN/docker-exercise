@@ -1,4 +1,4 @@
-#### Example about how to make container image to test apache server
+#### Example how to make container image to test apache server
 
 
 How to build and release image :
