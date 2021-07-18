@@ -1,4 +1,4 @@
-# 도커
+# DOCKER
 
 Repository for studying how to use docker in Windows environment
 
@@ -36,7 +36,7 @@ dockerd은 `hub.docker.com` 에서 nginx 이미지 리스트를 출력해줌
 
 * Dockerfile : 컨테이너를 build 하는데 도와주는 명령어 집합
   * text file로 Top-Down으로 해석
-  * 컨테이너 이미지를 생성할 수 있는 **고유의 지시어(Instruction)**을 가짐
+  * 컨테이너 이미지를 생성할 수 있는 **고유의 지시어(Instruction)** 을 가짐
   * 대소문자 구분은 없으나 가독성을 위해 사용
 
 * Dockerfile 명령어
