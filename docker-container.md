@@ -119,7 +119,7 @@ Docker command를 통해 __CPU, Memory, Disk I/O__ 등의 리소스를 제한할
 
 ### 실습
 
-> ### 메모리 리소스 제한
+> 메모리 리소스 제한
 
 메모리 부하 확인할 dockerfile 생성
 
@@ -162,7 +162,7 @@ stress: info: [1] successful run completed in 5s
 
 <br/>
 
-> ### CPU 리소스 제한
+> CPU 리소스 제한
 
 #### 1. CPU 코어 설정
 
@@ -170,13 +170,13 @@ stress: info: [1] successful run completed in 5s
 
 * `$ docker run --cpuset-cpus 1 --name c1 -d stress stress --cpu 1`
 
-![image-20210718220602065](./img/image-20210718220602065.png)
+![image-20210718220602065](C:\Users\user\JIKMAN\docker-exercise\img\image-20210718220602065.png)
 
 ​		`htop` 커멘드를 통해 2번째(index 1) CPU에 작업 로드 100% 일으키고 있는 것을 확인 가능
 
 	- `$ docker run --cpuset-cpus 0 --name c1 -d stress stress --cpu 1`
 
-![image-20210718221024461](./img/image-20210718221024461.png)
+![image-20210718221024461](C:\Users\user\JIKMAN\docker-exercise\img\image-20210718221024461.png)
 
 ​		1번째 CPU에서 작업하고 있는 것을 확인 가능
 
@@ -190,13 +190,13 @@ stress: info: [1] successful run completed in 5s
 * `$ docker run -c 512 --name cload3 -d stress:latest`
 * `$ docker stats` CPU 사용량 등 확인 가능
 
-![image-20210718221909893](./img/image-20210718221909893.png)
+![image-20210718221909893](C:\Users\user\JIKMAN\docker-exercise\img\image-20210718221909893.png)
 
 사용하고 있는 컨테이너별 cpu 가중치를 확인할 수 있음
 
 (CPU돌아가는 소리가 엄청나서 컴퓨터 터지는줄...)
 
-> ### Block I/O 제한
+#### 3. Block I/O 제한
 
 * `$ docker run -it --rm --device-write-iops /dev/xvda:10 ubuntu:latest /bin/bash`
 
@@ -228,7 +228,7 @@ stress: info: [1] successful run completed in 5s
 
   block IO 설정을 통해 확연한 속도 차이를 확인할 수 있음
 
-> ### cAdvisor
+#### 4. cAdvisor
 
 * https://github.com/google/cadvisor/
 
@@ -253,5 +253,5 @@ stress: info: [1] successful run completed in 5s
 * UI를 통해 확인 가능
 * cAdvisor는 Kubernates에 포함되어 있음
 
-![image-20210718224637640](./img/image-20210718224637640.png)
+![image-20210718224637640](C:\Users\user\JIKMAN\docker-exercise\img\image-20210718224637640.png)
 
