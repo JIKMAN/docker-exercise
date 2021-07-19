@@ -16,9 +16,9 @@
 
 > #### volume 옵션 사용
 
-* -v <host path>:<container mout path>
-* -v <host path>:<container mout path>:<read write mode>
-* -v <container mount path>
+* `-v <host path>:<container mout path>`
+* `-v <host path>:<container mout path>:<read write mode>`
+* `-v <container mount path>`
   * `$ docker run -d -v /dbdata:/var/lib/mysql -e MYSQL...`
     * 해당 커멘드는 컨테이너가 docker host의 directory를 수정하게됌.
       보안이슈 등으로 인해 권장되지는 않음 (default : `rw`)
