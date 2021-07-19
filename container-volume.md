@@ -52,7 +52,7 @@
 
    * db list가 보여짐
 
-![image-20210719002824854](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20210719002824854.png)
+![show_database](./img/show_database.png)
 
 5. `mysql> create database docker;`
 
