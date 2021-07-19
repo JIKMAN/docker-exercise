@@ -17,16 +17,20 @@
 > #### volume 옵션 사용
 
 * `-v <host path>:<container mout path>`
-* `-v <host path>:<container mout path>:<read write mode>`
-* `-v <container mount path>`
   * `$ docker run -d -v /dbdata:/var/lib/mysql -e MYSQL...`
-    * 해당 커멘드는 컨테이너가 docker host의 directory를 수정하게됌.
-      보안이슈 등으로 인해 권장되지는 않음 (default : `rw`)
+      * 해당 커멘드는 컨테이너가 docker host의 directory를 수정하게됌.
+      * 보안이슈 등으로 인해 권장되지는 않음 (default : `rw`)
+
+* `-v <host path>:<container mout path>:<read write mode>`
   * `$ docker run -d -v /webdata:/var/www/html:ro httpd:latest`
     *  `ro` : /webdata의 데이터를 이용해 service를 실행하나
        apache는 host에 있는 데이터를 수정하지 못하도록 보호하면서 마운트
+
+* `-v <container mount path>`
   * `$ docker run -d -v /var/lib/mysql -e MYSQL...`
     * 임의의 컨테이너 디렉토리를 넣어주어 자동마운트 시켜줌
+
+
 * __"컨테이너 끼리의 데이터 공유가 가능해짐"__
   * 컨테이너의 data를 host /webdata에 저장
   * /webdata 데이터를 readonly형식으로 다른 웹 서버로 docker run하여 service
