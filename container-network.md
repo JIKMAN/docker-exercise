@@ -18,7 +18,7 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED         STATUS     
 
 * localhost:80 서버가 통신중인 것 확인할 수 있음
 
-![image-20210719212612672](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20210719212612672.png)
+![image-20210719212612672](./img/port80.png)
 
 > 네트워크간 연결 연습 2
 
@@ -53,11 +53,10 @@ ENTRYPOINT ["/bin/df.sh"]
 
 * `docker run -d --name web2 -v /webdata:/usr/share/nginx/html:ro -p 80:80 nginx:1.14`
 
-  * 로컬 호스트에서 실행되는 것을 확인할 수 있음
+  * 80 포트로 접속하여 로컬 호스트에서 실행되는 것을 확인할 수 있음
 
-  ![image-20210719214617092](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20210719214617092.png)
-
-
+    
+  
 
 ### 컨테이너 간 통신
 
